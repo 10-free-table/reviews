@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import styles from '../styles/styles.css';
 
 const OverallAverage = (props) => {
@@ -8,9 +11,9 @@ const OverallAverage = (props) => {
   const ratingsArray = [];
   for (let i = 0; i < 5; i += 1) {
     if (i < overallAverage) {
-      ratingsArray.push(<i styleName="starChecked" key={i} className="fas fa-star" />);
+      ratingsArray.push(<FontAwesomeIcon styleName="starChecked" key={i} icon={faStar} />);
     } else {
-      ratingsArray.push(<i styleName="starChecked" key={i} className="far fa-star" />);
+      ratingsArray.push(<FontAwesomeIcon styleName="starChecked" key={i} icon={farStar} />);
     }
   }
   return (

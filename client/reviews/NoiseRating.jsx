@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignal } from '@fortawesome/free-solid-svg-icons';
 import styles from '../styles/styles.css';
 
 const NoiseRating = (props) => {
@@ -10,7 +12,7 @@ const NoiseRating = (props) => {
     <div styleName="ratingContainer">
       <div styleName="ratingDiv">
         <div styleName="icoContainer">
-          <i styleName="inlineIco" className="fas fa-signal" />
+          <FontAwesomeIcon styleName="inlineIco" icon={faSignal} />
         </div>
         <div styleName="ratingLabel">
           {'Noise · '}
