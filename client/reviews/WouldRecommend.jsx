@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CSSModules from 'react-css-modules';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import styles from '../styles/styles.css';
 
 const WouldRecommend = (props) => {
@@ -9,7 +11,7 @@ const WouldRecommend = (props) => {
     <div styleName="ratingContainer">
       <div styleName="ratingDiv">
         <div styleName="icoContainer">
-          <i styleName="inlineIco" className="far fa-thumbs-up" />
+          <FontAwesomeIcon styleName="inlineIco" icon={faThumbsUp} />
         </div>
         <div styleName="ratingLabel">
           {`${wouldRecommendPerc}% of people `}
