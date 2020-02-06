@@ -7,7 +7,7 @@ import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 import styles from '../styles/styles.css';
 
 const OverallAverage = (props) => {
-  const { overallAverage } = props;
+  let { overallAverage } = props;
   const ratingsArray = [];
   for (let i = 0; i < 5; i += 1) {
     if (i < overallAverage) {
@@ -16,6 +16,7 @@ const OverallAverage = (props) => {
       ratingsArray.push(<FontAwesomeIcon styleName="starChecked" key={i} icon={farStar} />);
     }
   }
+  overallAverage = overallAverage.toFixed(1);
   return (
     <div styleName="overallAverage">
       <div styleName="overallStars">
