@@ -3,11 +3,11 @@ const morgan = require('morgan');
 const cors = require('cors');
 const path = require('path');
 const db = require('../database/index.js');
-const { PORT } = require('../app.config.js');
+const { PORT, PROXY_PORT } = require('../app.config.js');
 
 const server = express();
 const corsOptions = {
-  origin: 'http://localhost:3001',
+  origin: `http://localhost:${PROXY_PORT}`,
 };
 
 server.use(morgan(':url'));
