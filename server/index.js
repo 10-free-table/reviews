@@ -13,6 +13,7 @@ const corsOptions = {
 server.use(morgan(':url'));
 server.use(cors(corsOptions));
 server.use(express.static(path.join(__dirname, '/../public')));
+server.use('/:pageId', express.static(path.join(__dirname, '/../public')));
 
 server.get('/reviews/:pageId', (req, res) => {
   console.log(req.params);
@@ -25,11 +26,6 @@ server.get('/reviews/:pageId', (req, res) => {
       res.send(results);
     }
   });
-});
-
-server.get('/bundle.js', (req, res) => {
-  console.log('serving bundle.js path');
-  res.sendFile(path.join(__dirname, '/../public', 'bundle.js'));
 });
 
 server.listen(PORT, () => {
