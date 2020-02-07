@@ -10,7 +10,7 @@ import OverviewBody from './OverviewBody.jsx';
 
 import { PORT } from '../../app.config.js';
 
-const serverurl = `http://localhost:${PORT}`;
+const serverurl = `http://52.26.56.157:${PORT}`;
 
 class ReviewModule extends Component {
   constructor(props) {
