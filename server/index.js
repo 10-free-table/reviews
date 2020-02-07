@@ -6,15 +6,15 @@ const db = require('../database/index.js');
 const { PORT, PROXY_PORT } = require('../app.config.js');
 
 const server = express();
-const corsOptions = {
-  origin: function (origin) {
-    console.log(origin);
-    return `http://localhost:${PROXY_PORT}`;
-  },
-};
+// const corsOptions = {
+//   origin: function (origin) {
+//     console.log(origin);
+//     return `http://localhost:${PROXY_PORT}`;
+//   },
+// };
 
 server.use(morgan(':url'));
-server.use(cors(corsOptions));
+server.use(cors());
 server.use(express.static(path.join(__dirname, '/../public')));
 server.use('/:pageId', express.static(path.join(__dirname, '/../public')));
 
