@@ -7,7 +7,10 @@ const { PORT, PROXY_PORT } = require('../app.config.js');
 
 const server = express();
 const corsOptions = {
-  origin: `http://localhost:${PROXY_PORT}`,
+  origin: function (origin) {
+    console.log(origin);
+    return `http://localhost:${PROXY_PORT}`;
+  },
 };
 
 server.use(morgan(':url'));
