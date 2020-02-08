@@ -201,6 +201,5 @@ body {
 }
 
 .ratingBar:hover .barContainer {
-  border: solid 1px #da3743;
+  border: solid 1px #382224;
 }
-
