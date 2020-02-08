@@ -181,3 +181,26 @@ body {
   text-align: center;
 }
 
+.barContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 233px;
+  height: 18px;
+  border: solid 1px #d8d9db;
+}
+
+.barFill {
+  height: 100%;
+  background-color: #da3743;
+  margin-top: 0.5px;
+}
+
+.ratingBar:hover .barLabel {
+  border-bottom: solid 1px black;
+}
+
+.ratingBar:hover .barContainer {
+  border: solid 1px #da3743;
+}
+

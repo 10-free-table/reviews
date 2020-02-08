@@ -5,13 +5,14 @@ import styles from '../styles/styles.css';
 
 const RatingBar = (props) => {
   const { ratings } = props;
+  const width = `${ratings.perc}%`;
   return (
     <div styleName="ratingBar">
       <span styleName="barLabel">
         {ratings.label}
       </span>
-      <div>
-        {`percent to fill ratings bar: ${ratings.perc}`}
+      <div styleName="barContainer">
+        <div styleName="barFill" style={{ width }}></div>
       </div>
     </div>
   );
